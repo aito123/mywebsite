@@ -1,5 +1,5 @@
 baseURL: https://santiagosotelo.netlify.app/
-title: Your title
+title: Santiago Sotelo
 theme: hugo-theme-m10c
 paginate: 8
 menu:
@@ -17,13 +17,13 @@ menu:
       url: /about/
       weight: 3
 params:
-  author: John Doe
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  author: Santiago Sotelo
+  description: Sociología, análisis de datos, Black Mirror [?]
   menu_item_separator: ' - '
   social:
     - icon: github
       name: Github
-      url: https://github.com/gohugoio
-    - icon: twitter
-      name: Twitter
-      url: https://twitter.com/gohugoio
+      url: https://github.com/aito123
+    - icon: linkedin
+      name: Linkedin
+      url: https://www.linkedin.com/in/santiago-sotelo-989574171
