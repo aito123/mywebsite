@@ -19,6 +19,7 @@ menu:
 params:
   author: Santiago Sotelo
   description: Sociología, análisis de datos, Black Mirror [?]
+  avatar: C:/Users/Lenovo/Documents/mywebsite/resources/_gen/images/avatar.jpg
   menu_item_separator: ' - '
   social:
     - icon: github
