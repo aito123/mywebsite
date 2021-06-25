@@ -16,6 +16,10 @@ menu:
       name: About
       url: /about/
       weight: 3
+    - identifier: cv
+      name: CV
+      url: /cv.pdf/
+      weight: 3      
 params:
   author: Santiago Sotelo
   description: Sociología, análisis de datos, Black Mirror [?]
