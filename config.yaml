@@ -16,7 +16,7 @@ menu:
       name: About
       url: /about/
       weight: 3
-    - identifier: cv.pdf
+    - identifier: https://drive.google.com/file/d/1hMYSbxXtBUFn3BTshzL-grIYtCyySOi9/view?usp=sharing
       name: CV
       url: /cv.pdf/
       weight: 3      
