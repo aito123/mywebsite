@@ -16,7 +16,7 @@ menu:
       name: About
       url: /about/
       weight: 3
-    - identifier: cv
+    - identifier: cv.pdf
       name: CV
       url: /cv.pdf/
       weight: 3      
