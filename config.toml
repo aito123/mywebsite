@@ -1,0 +1,54 @@
+baseURL = "https://santiagosotelo.netlify.app/"
+paginate = 8
+theme = "hugo-theme-m10c"
+title = "Santiago Sotelo"
+
+[markup]
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true
+
+[menu]
+
+[[menu.main]]
+identifier = "home"
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+identifier = "tags"
+name = "Tags"
+url = "/tags/"
+weight = 2
+
+[[menu.main]]
+identifier = "about"
+name = "About"
+url = "/about/"
+weight = 3
+
+[params]
+author = "Santiago Sotelo"
+avatar = "/./config_files/avatar.jpg"
+description = "Sociología, análisis de datos, Black Mirror [?]"
+menu_item_separator = " - "
+
+[[params.social]]
+icon = "github"
+name = "Github"
+url = "https://github.com/aito123"
+
+[[params.social]]
+icon = "linkedin"
+name = "Linkedin"
+url = "https://www.linkedin.com/in/santiago-sotelo-989574171"
+
+# Red theme
+[params.style]
+  darkestColor = "#d35050"
+  darkColor = "#212121"
+  lightColor = "#d6d6d6"
+  lightestColor = "#d3d3d3"
+  primaryColor = "#ffffff"
+

@@ -21,3 +21,7 @@ options(
 
 # fix Hugo version
 options(blogdown.hugo.version = "0.83.1")
+
+#Default post (parece que no funciona)
+options(blogdown.ext = ".Rmd", blogdown.author = "Santiago Sotelo", 
+        blogdown.subdir = "blog")
