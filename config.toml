@@ -28,9 +28,14 @@ name = "About"
 url = "/about/"
 weight = 3
 
+[[menu.main]]
+name = "CV"
+url = "/./config_files/cv.pdf"
+weight = 4
+
 [params]
 author = "Santiago Sotelo"
-avatar = "/./config_files/avatar.jpg"
+avatar = "/./config_files/profile1.jpg"
 description = "Sociología, análisis de datos, Black Mirror [?]"
 menu_item_separator = " - "
 
@@ -44,11 +49,11 @@ icon = "linkedin"
 name = "Linkedin"
 url = "https://www.linkedin.com/in/santiago-sotelo-989574171"
 
-# Red theme
+# Own theme , hice unos cambios en layouts/_default_baseof.html de algunos colores más.
 [params.style]
-  darkestColor = "#d35050"
-  darkColor = "#212121"
-  lightColor = "#d6d6d6"
-  lightestColor = "#d3d3d3"
-  primaryColor = "#ffffff"
+  darkestColor = "#081623" #Barra lateral
+  darkColor = "#ffffff" #Color fondo
+  lightColor = "#212121" #Letra
+  lightestColor = "#F28544" #Títulos
+  primaryColor = "#F28544" #Menu colores
 
