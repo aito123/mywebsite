@@ -36,7 +36,7 @@ weight = 4
 [params]
 author = "Santiago Sotelo"
 avatar = "/./config_files/profile1.jpg"
-description = "SOCIOLOG+IA // Sociología e Inteligencia Artificial"
+description = "______ SOCIOLOG+IA ______ Sociología e Inteligencia Artificial"
 menu_item_separator = " - "
 favicon = "/./ico/favicon.ico" # Path to favicon file
 
