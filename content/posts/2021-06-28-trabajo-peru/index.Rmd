@@ -1,5 +1,5 @@
 ---
-title: 'Trabajo en el Perú: análisis descriptivo'
+title: 'El Trabajo en el Perú: análisis descriptivo'
 author: Santiago Sotelo
 date: '2021-06-28'
 slug: trabajo_peru
@@ -8,44 +8,44 @@ tags: []
 
 ---
 
-<details><summary>Mostrar código en R</summary>
-Some text. Perfecto esto me ayudará muchísimo.
+En esta nota revisaremos la **Encuesta Permanente de Empleo (EPE)** que corresponde al trimestre **Dic-Ene-Feb2021** que se encuentra en la siguiente página: http://iinei.inei.gob.pe/microdatos/
 
-```{r code}
-# even code
-print("Hello world!")
-```
-</details>
+Carguemos la base de datos y revisemos las variables que tiene:
 
-
-En esta nota haremos una revisión de la data abierta disponible acerca del trabajo en el Perú. El objetivo es explorar la data que nos proveen páginas como el INEI, MINTRA, entre otras.
-
-```{r, echo=FALSE}
-1 + 1
-```
-Hide text output (you can also use `results = FALSE`):
+<details><summary>`Mostrar código en R`</summary>
 
 ```{r, results='hide'}
-print("You will not see the text output.")
+library(tidyverse)
+library(rio)
+
+epe2021 <- import("C:/Users/Lenovo/Documents/Biblioteca/Tesis/EPE 2021_ Encuesta Permanente de Empleo/Trim Dic-Ene-Feb21.sav")
+names(epe2021)
+
 ```
 
-Hide messages:
+</details>
 
-```{r, message=FALSE}
-message("You will not see the message.")
+```{r, echo=FALSE}
+names(epe2021)
 ```
 
-Hide warning messages:
+Estas son las variables que presenta esta base de datos de las cuales nos interesan, para esta prueba, las siguientes:
 
-```{r, warning=FALSE}
-# this will generate a warning but it will be suppressed
-1:2 + 1:3
+ - p107 <- Sexo
+ - p108 <- Edad
+ - p201 <- ¿La semana pasada usted tuvo algún trabajo?
+
+```{r, echo=FALSE}
+epe2021_1<- subset(epe2021, select=c("p107", "p108", "p201"))
+
+str(epe2021_1)
 ```
 
-Hide plots:
 
-```{r, fig.show='hide'}
-plot(cars)
-```
 
-Todavía estoy probando así que paciencia con la nota.
+
+
+
+
+
+

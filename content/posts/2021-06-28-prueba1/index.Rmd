@@ -31,3 +31,46 @@ plot(pressure)
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+
+
+
+```{r code}
+# even code
+print("Hello world!")
+```
+
+
+
+En esta nota haremos una revisión de la data abierta disponible acerca del trabajo en el Perú. El objetivo es explorar la data que nos proveen páginas como el INEI, MINTRA, entre otras.
+
+```{r, echo=FALSE}
+1 + 1
+```
+Hide text output (you can also use `results = FALSE`):
+
+```{r, results='hide'}
+print("You will not see the text output.")
+```
+
+Hide messages:
+
+```{r, message=FALSE}
+message("You will not see the message.")
+```
+
+Hide warning messages:
+
+```{r, warning=FALSE}
+# this will generate a warning but it will be suppressed
+1+1
+```
+
+Hide plots:
+
+```{r, fig.show='hide'}
+plot(cars)
+```
+
+Todavía estoy probando así que paciencia con la nota.

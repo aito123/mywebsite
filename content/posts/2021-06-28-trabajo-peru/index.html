@@ -1,5 +1,5 @@
 ---
-title: 'Trabajo en el Perú: análisis descriptivo'
+title: 'El Trabajo en el Perú: análisis descriptivo'
 author: Santiago Sotelo
 date: '2021-06-28'
 slug: trabajo_peru
@@ -11,25 +11,54 @@ tags: []
 <script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
 
 
+<p>En esta nota revisaremos la <strong>Encuesta Permanente de Empleo (EPE)</strong> que corresponde al trimestre <strong>Dic-Ene-Feb2021</strong> que se encuentra en la siguiente página: <a href="http://iinei.inei.gob.pe/microdatos/" class="uri">http://iinei.inei.gob.pe/microdatos/</a></p>
+<p>Carguemos la base de datos y revisemos las variables que tiene:</p>
 <details>
 <summary>
-Mostrar código en R
+<code>Mostrar código en R</code>
 </summary>
-<p>Some text. Perfecto esto me ayudará muchísimo.</p>
-<pre class="r"><code># even code
-print(&quot;Hello world!&quot;)</code></pre>
-<pre><code>## [1] &quot;Hello world!&quot;</code></pre>
+<pre class="r"><code>library(tidyverse)</code></pre>
+<pre><code>## -- Attaching packages --------------------------------------- tidyverse 1.3.1 --</code></pre>
+<pre><code>## v ggplot2 3.3.4     v purrr   0.3.4
+## v tibble  3.1.2     v dplyr   1.0.7
+## v tidyr   1.1.3     v stringr 1.4.0
+## v readr   1.4.0     v forcats 0.5.1</code></pre>
+<pre><code>## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()</code></pre>
+<pre class="r"><code>library(rio)
+
+epe2021 &lt;- import(&quot;C:/Users/Lenovo/Documents/Biblioteca/Tesis/EPE 2021_ Encuesta Permanente de Empleo/Trim Dic-Ene-Feb21.sav&quot;)
+names(epe2021)</code></pre>
 </details>
-<p>En esta nota haremos una revisión de la data abierta disponible acerca del trabajo en el Perú. El objetivo es explorar la data que nos proveen páginas como el INEI, MINTRA, entre otras.</p>
-<pre><code>## [1] 2</code></pre>
-<p>Hide text output (you can also use <code>results = FALSE</code>):</p>
-<pre class="r"><code>print(&quot;You will not see the text output.&quot;)</code></pre>
-<p>Hide messages:</p>
-<pre class="r"><code>message(&quot;You will not see the message.&quot;)</code></pre>
-<p>Hide warning messages:</p>
-<pre class="r"><code># this will generate a warning but it will be suppressed
-1:2 + 1:3</code></pre>
-<pre><code>## [1] 2 4 4</code></pre>
-<p>Hide plots:</p>
-<pre class="r"><code>plot(cars)</code></pre>
-<p>Todavía estoy probando así que paciencia con la nota.</p>
+<pre><code>##   [1] &quot;pano&quot;       &quot;pmes&quot;       &quot;conglome&quot;   &quot;submuestra&quot; &quot;vivienda&quot;  
+##   [6] &quot;hogar&quot;      &quot;codperso&quot;   &quot;dominio&quot;    &quot;estrato&quot;    &quot;codpanel&quot;  
+##  [11] &quot;p103&quot;       &quot;p104&quot;       &quot;p105&quot;       &quot;p106&quot;       &quot;p107&quot;      
+##  [16] &quot;p108&quot;       &quot;p109a&quot;      &quot;p109b&quot;      &quot;p109c&quot;      &quot;p200n&quot;     
+##  [21] &quot;p200i&quot;      &quot;p200a&quot;      &quot;p200b&quot;      &quot;p200bb&quot;     &quot;p200c&quot;     
+##  [26] &quot;p200d&quot;      &quot;p200dd&quot;     &quot;p200e&quot;      &quot;p200f&quot;      &quot;p200g&quot;     
+##  [31] &quot;p201&quot;       &quot;p202&quot;       &quot;p203&quot;       &quot;p204&quot;       &quot;p2041&quot;     
+##  [36] &quot;p2042&quot;      &quot;p2043&quot;      &quot;p2044&quot;      &quot;p2045&quot;      &quot;p2046&quot;     
+##  [41] &quot;p2047&quot;      &quot;p2048&quot;      &quot;p2049&quot;      &quot;p20410&quot;     &quot;p20411&quot;    
+##  [46] &quot;p204a&quot;      &quot;p205a&quot;      &quot;p206&quot;       &quot;P206AA&quot;     &quot;p207a&quot;     
+##  [51] &quot;p207b&quot;      &quot;p208b1&quot;     &quot;p208b2&quot;     &quot;p208b3&quot;     &quot;p209a&quot;     
+##  [56] &quot;p209b&quot;      &quot;p209c&quot;      &quot;p209d&quot;      &quot;p209e&quot;      &quot;p209f&quot;     
+##  [61] &quot;p209g&quot;      &quot;p209t&quot;      &quot;p209bb&quot;     &quot;p209cc&quot;     &quot;p209h&quot;     
+##  [66] &quot;p209ee&quot;     &quot;p210&quot;       &quot;p211a&quot;      &quot;p211b&quot;      &quot;p212a&quot;     
+##  [71] &quot;p212b&quot;      &quot;p212c&quot;      &quot;p212d&quot;      &quot;p212e&quot;      &quot;p213&quot;      
+##  [76] &quot;p214&quot;       &quot;p215&quot;       &quot;p216&quot;       &quot;p217&quot;       &quot;p218&quot;      
+##  [81] &quot;p219&quot;       &quot;p220&quot;       &quot;p222&quot;       &quot;P223A1&quot;     &quot;P223A2&quot;    
+##  [86] &quot;P223A3&quot;     &quot;P223A4&quot;     &quot;P223A5&quot;     &quot;P223A6&quot;     &quot;P223A7&quot;    
+##  [91] &quot;P224&quot;       &quot;P225&quot;       &quot;ocu200&quot;     &quot;i211a&quot;      &quot;i211b&quot;     
+##  [96] &quot;i212a&quot;      &quot;i212b&quot;      &quot;i212c&quot;      &quot;i212d&quot;      &quot;ingtot&quot;    
+## [101] &quot;ingprin&quot;    &quot;resident&quot;   &quot;fa_def21&quot;</code></pre>
+<p>Estas son las variables que presenta esta base de datos de las cuales nos interesan, para esta prueba, las siguientes:</p>
+<ul>
+<li>p107 &lt;- Sexo</li>
+<li>p108 &lt;- Edad</li>
+<li>p201 &lt;- ¿La semana pasada usted tuvo algún trabajo?</li>
+</ul>
+<pre><code>## &#39;data.frame&#39;:    15700 obs. of  3 variables:
+##  $ p107: num  1 1 1 1 1 1 1 1 1 1 ...
+##  $ p108: num  23 43 30 29 55 16 25 50 39 40 ...
+##  $ p201: num  1 1 1 1 1 1 1 2 1 1 ...</code></pre>
