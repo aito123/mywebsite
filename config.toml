@@ -38,6 +38,7 @@ author = "Santiago Sotelo"
 avatar = "/./config_files/profile1.jpg"
 description = "Sociología, análisis de datos, Black Mirror [?]"
 menu_item_separator = " - "
+favicon = "/./ico/favicon.ico" # Path to favicon file
 
 [[params.social]]
 icon = "github"
