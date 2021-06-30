@@ -5,6 +5,7 @@ date: '2021-06-28'
 slug: trabajo_peru
 categories: []
 tags: []
+output: html_document
 
 ---
 
@@ -12,9 +13,9 @@ En esta nota revisaremos la **Encuesta Permanente de Empleo (EPE)** que correspo
 
 Carguemos la base de datos y revisemos las variables que tiene:
 
-<details><summary>R code</summary>
+<details><summary> R code </summary>
 
-```{r, results='hide'}
+```{r , results='hide', message=FALSE, warning=FALSE}
 library(tidyverse)
 library(rio)
 
@@ -34,6 +35,14 @@ Estas son las variables que presenta esta base de datos de las cuales nos intere
  - p107 <- Sexo
  - p108 <- Edad
  - p201 <- ¿La semana pasada usted tuvo algún trabajo?
+
+<details><summary> R code </summary>
+```{r, eval=FALSE, message=FALSE, warning=FALSE}
+epe2021_1<- subset(epe2021, select=c("p107", "p108", "p201"))
+str(epe2021_1)
+
+```
+</details>
 
 ```{r, echo=FALSE}
 epe2021_1<- subset(epe2021, select=c("p107", "p108", "p201"))
