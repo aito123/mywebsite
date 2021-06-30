@@ -40,6 +40,7 @@ description = "______ SOCIOLOG+IA ______ Sociología e Inteligencia Artificial"
 menu_item_separator = " - "
 favicon = "/./ico/favicon.ico" # Path to favicon file
 
+
 [[params.social]]
 icon = "github"
 name = "Github"
@@ -57,4 +58,5 @@ url = "https://www.linkedin.com/in/santiago-sotelo-989574171"
   lightColor = "#212121" #Letra
   lightestColor = "#F28544" #Títulos
   primaryColor = "#F28544" #Menu colores
+
 
