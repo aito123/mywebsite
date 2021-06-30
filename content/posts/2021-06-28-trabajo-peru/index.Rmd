@@ -25,7 +25,7 @@ names(epe2021)
 
 </details>
 
-```{r}
+```{r, echo=FALSE}
 names(epe2021)
 ```
 
