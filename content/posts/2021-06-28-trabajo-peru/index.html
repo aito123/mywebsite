@@ -5,12 +5,20 @@ date: '2021-06-28'
 slug: trabajo_peru
 categories: []
 tags: []
-
+output: 
+  html_document:
+    code_folding: hide
 ---
 
 <script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
 
 
+<pre class="r"><code>1  # code is hidden initially</code></pre>
+<pre><code>## [1] 1</code></pre>
+<pre class="r fold-show"><code>2  # code is shown initially</code></pre>
+<pre><code>## [1] 2</code></pre>
+<pre class="r"><code>3  # also hidden</code></pre>
+<pre><code>## [1] 3</code></pre>
 <p>En esta nota revisaremos la <strong>Encuesta Permanente de Empleo (EPE)</strong> que corresponde al trimestre <strong>Dic-Ene-Feb2021</strong> que se encuentra en la siguiente página: <a href="http://iinei.inei.gob.pe/microdatos/" class="uri">http://iinei.inei.gob.pe/microdatos/</a></p>
 <p>Carguemos la base de datos y revisemos las variables que tiene:</p>
 <details>
@@ -31,6 +39,7 @@ tags: []
 epe2021 &lt;- import(&quot;C:/Users/Lenovo/Documents/Biblioteca/Tesis/EPE 2021_ Encuesta Permanente de Empleo/Trim Dic-Ene-Feb21.sav&quot;)
 names(epe2021)</code></pre>
 </details>
+<pre class="r"><code>names(epe2021)</code></pre>
 <pre><code>##   [1] &quot;pano&quot;       &quot;pmes&quot;       &quot;conglome&quot;   &quot;submuestra&quot; &quot;vivienda&quot;  
 ##   [6] &quot;hogar&quot;      &quot;codperso&quot;   &quot;dominio&quot;    &quot;estrato&quot;    &quot;codpanel&quot;  
 ##  [11] &quot;p103&quot;       &quot;p104&quot;       &quot;p105&quot;       &quot;p106&quot;       &quot;p107&quot;      

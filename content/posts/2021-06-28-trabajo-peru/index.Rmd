@@ -5,8 +5,23 @@ date: '2021-06-28'
 slug: trabajo_peru
 categories: []
 tags: []
-
+output: 
+  html_document:
+    code_folding: hide
 ---
+
+```{r}
+1  # code is hidden initially
+```
+
+```{r class.source = 'fold-show'}
+2  # code is shown initially
+```
+
+```{r}
+3  # also hidden
+```
+
 
 En esta nota revisaremos la **Encuesta Permanente de Empleo (EPE)** que corresponde al trimestre **Dic-Ene-Feb2021** que se encuentra en la siguiente página: http://iinei.inei.gob.pe/microdatos/
 
@@ -25,7 +40,7 @@ names(epe2021)
 
 </details>
 
-```{r, echo=FALSE}
+```{r}
 names(epe2021)
 ```
 
