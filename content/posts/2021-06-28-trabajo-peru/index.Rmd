@@ -12,7 +12,7 @@ En esta nota revisaremos la **Encuesta Permanente de Empleo (EPE)** que correspo
 
 Carguemos la base de datos y revisemos las variables que tiene:
 
-<details><summary>`Mostrar código en R`</summary>
+<details><summary>R code</summary>
 
 ```{r, results='hide'}
 library(tidyverse)
