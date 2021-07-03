@@ -39,7 +39,7 @@ avatar = "/./config_files/profile1.jpg"
 description = "______ SOCIOLOG+IA ______ Sociología e Inteligencia Artificial"
 menu_item_separator = " - "
 favicon = "/./ico/favicon.ico" # Path to favicon file
-
+customCSS = ["css/codefolding.css"] #Esto se supone ayudaría con el codefolding, por mientras borré los js scripts. Hay una carpeta css en static.
 
 [[params.social]]
 icon = "github"
@@ -58,5 +58,12 @@ url = "https://www.linkedin.com/in/santiago-sotelo-989574171"
   lightColor = "#212121" #Letra
   lightestColor = "#F28544" #Títulos
   primaryColor = "#F28544" #Menu colores
+  
+# Set to true to disable code folding
+disable_codefolding = false
+# Set to "hide" or "show" all codes by default
+codefolding_show = "show"
+# Set to true to exclude the "Show/hide all" button
+codefolding_nobutton = false
 
 

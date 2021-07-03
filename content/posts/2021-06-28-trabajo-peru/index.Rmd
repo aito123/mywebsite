@@ -13,6 +13,8 @@ En esta nota revisaremos la **Encuesta Permanente de Empleo (EPE)** que correspo
 
 Carguemos la base de datos y revisemos las variables que tiene:
 
+Al final tal vez lo mejor será que ponga todo el código al inicio. Más fácil menos vueltas.
+
 <details><summary> R code </summary>
 
 ```{r , results='hide', message=FALSE, warning=FALSE}
